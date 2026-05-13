@@ -25,11 +25,26 @@ function writeData(file, data) {
 
 // Players
 const PLAYERS = [
-  "Lucas Álvarez", "Nico Aguilar", "Dani García", "Kevin Aguilar",
-  "Luis Padilla", "Walter Rojas", "Luis Erices", "Nico Quiniñir",
-  "Gonza", "Darío Sánchez", "Nahuel Aguilar", "Martín Mastracci",
-  "Marcelo Mastracci", "GOLIL", "Rodrigo Marcolini", "Randi Hinojosa",
-  "Bebo", "Esteban Funes", "Guille Casanova"
+"Bebo",
+  "Dani García",
+  "Darío Sánchez",
+  "Esteban Funes",
+  "GOLIL",
+  "Gonza",
+  "Guille Casanova",
+  "Kevin Aguilar",
+  "Lucas Álvarez",
+  "Luis Erices",
+  "Luis Padilla",
+  "Marcelo Mastracci",
+  "Martín Mastracci",
+  "Milton Guzman",
+  "Nahuel Aguilar",
+  "Nico Aguilar",
+  "Nico Quiniñir",
+  "Randi Hinojosa",
+  "Rodrigo Marcolini",
+  "Walter Rojas"
 ];
 
 // Fixture
