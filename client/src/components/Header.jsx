@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export default function Header() {
   return (
     <header className="app-header">
@@ -14,9 +16,9 @@ export default function Header() {
         <div className="stripe"></div>
       </div>
       <div className="header-content">
-        <div className="team-logo-placeholder">CH</div>
+        <img src={logo} alt="chacaritanqn logo" className="team-logo" />
         <div className="header-text">
-          <h1>CHACARITANQN</h1>
+          <h1>chacaritanqn</h1>
           <p>Gestión de Equipo</p>
         </div>
       </div>
