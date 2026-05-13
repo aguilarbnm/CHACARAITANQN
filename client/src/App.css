@@ -1,4 +1,4 @@
-/* === CHACARITANQN Theme === */
+/* === chacaritanqn Theme === */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
@@ -18,6 +18,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -68,20 +72,11 @@ body {
   gap: 20px;
 }
 
-.team-logo-placeholder {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--red), var(--dark-red));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--white);
-  font-family: 'Oswald', sans-serif;
-  border: 3px solid var(--white);
+.team-logo {
+  width: 80px;
+  height: auto;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 .header-text h1 {
@@ -90,7 +85,6 @@ body {
   font-weight: 700;
   color: var(--white);
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .header-text p {
@@ -125,6 +119,8 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid var(--gray);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .user-name {
@@ -195,24 +191,50 @@ body {
 
 /* === PLAYER SELECT === */
 .player-select-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px 40px;
 }
 
-.player-select-container h2 {
+.hero-section {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background: var(--black);
+}
+
+.team-photo-hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 30px 20px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-overlay h2 {
   font-family: 'Oswald', sans-serif;
-  text-align: center;
-  color: var(--black);
-  margin-bottom: 8px;
-  font-size: 1.4rem;
+  margin-bottom: 4px;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.player-select-container p {
-  text-align: center;
-  color: var(--gray-dark);
-  margin-bottom: 24px;
-  font-size: 0.9rem;
+.hero-overlay p {
+  color: var(--gray);
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .player-grid {
@@ -278,6 +300,8 @@ body {
   padding: 12px 16px;
   border-bottom: 1px solid var(--gray);
   transition: background 0.2s;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .fixture-item:last-child {
@@ -299,6 +323,8 @@ body {
 .fixture-match {
   font-weight: 500;
   color: var(--black);
+  flex: 1;
+  min-width: 150px;
 }
 
 .fixture-match span {
@@ -308,11 +334,14 @@ body {
 /* === ATTENDANCE === */
 .attendance-fecha-select {
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 
 .attendance-fecha-select label {
   font-weight: 500;
-  margin-right: 10px;
 }
 
 .attendance-fecha-select select {
@@ -321,12 +350,15 @@ body {
   border-radius: 6px;
   font-size: 0.9rem;
   cursor: pointer;
+  flex: 1;
+  min-width: 150px;
 }
 
 .attendance-actions {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -412,6 +444,8 @@ body {
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid var(--gray);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .attendance-list li:last-child {
@@ -462,6 +496,8 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-top: 12px;
+  overflow-x: auto;
+  display: block;
 }
 
 .votes-table th,
@@ -496,6 +532,8 @@ body {
   border-bottom: 1px solid var(--gray);
   counter-increment: ranking;
   transition: background 0.2s;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .ranking-item:hover {
@@ -519,6 +557,7 @@ body {
   flex: 1;
   font-weight: 500;
   font-size: 1rem;
+  min-width: 150px;
 }
 
 .ranking-points {
@@ -603,6 +642,7 @@ body {
   gap: 10px;
   align-items: center;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .admin-pin-form input {
@@ -629,6 +669,8 @@ body {
   border-radius: 6px;
   border: 1px solid var(--gray);
   font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .payment-item .player-name {
@@ -666,6 +708,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
+  min-width: 150px;
 }
 
 .expense-form label {
@@ -692,6 +736,8 @@ body {
   padding: 10px 0;
   border-bottom: 1px solid var(--gray);
   font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .expense-list li:last-child {
@@ -724,6 +770,8 @@ body {
   border: 2px solid var(--gray);
   border-radius: 6px;
   font-size: 0.9rem;
+  flex: 1;
+  min-width: 150px;
 }
 
 /* === MESSAGES === */
@@ -756,16 +804,253 @@ body {
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 600px) {
+
+/* Extra Small Devices (< 480px) */
+@media (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header-content {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .team-logo {
+    width: 50px;
+  }
+
+  .header-text h1 {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .header-text p {
+    font-size: 0.65rem;
+  }
+
+  .user-bar {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .user-name {
+    font-size: 0.85rem;
+    flex: 1;
+  }
+
+  .btn-logout {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  .main-nav {
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.7rem;
+    min-width: auto;
+  }
+
+  .main-content {
+    padding: 8px;
+  }
+
+  .player-select-container {
+    padding: 0 10px 20px;
+  }
+
+  .hero-section {
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .hero-overlay {
+    padding: 20px 10px 10px;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .player-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+
+  .player-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .fixture-item {
+    padding: 8px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fixture-fecha {
+    font-size: 0.8rem;
+  }
+
+  .fixture-match {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .attendance-fecha-select {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .attendance-fecha-select select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .attendance-actions {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: auto;
+  }
+
+  .attendance-list li {
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
+
+  .finance-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .finance-box {
+    padding: 12px;
+  }
+
+  .finance-box .amount {
+    font-size: 1.3rem;
+  }
+
+  .finance-box h3 {
+    font-size: 0.8rem;
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .payment-item {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .payment-toggle {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+  }
+
+  .expense-form {
+    flex-direction: column;
+  }
+
+  .expense-form .field {
+    min-width: auto;
+  }
+
+  .expense-form input, .expense-form select {
+    width: 100%;
+  }
+
+  .admin-pin-form {
+    flex-direction: column;
+  }
+
+  .admin-pin-form input {
+    width: 100%;
+  }
+
+  .month-select {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .month-select select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .votes-table {
+    font-size: 0.75rem;
+  }
+
+  .votes-table th,
+  .votes-table td {
+    padding: 6px 4px;
+  }
+
+  .ranking-item {
+    padding: 10px 8px;
+  }
+
+  .ranking-position {
+    font-size: 1.1rem;
+    min-width: 35px;
+  }
+
+  .ranking-name {
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  .ranking-points {
+    font-size: 0.95rem;
+    min-width: 50px;
+  }
+
+  .app-footer {
+    padding: 12px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Small Devices (480px - 600px) */
+@media (min-width: 480px) and (max-width: 600px) {
   .header-content {
     padding: 14px;
     gap: 12px;
   }
 
-  .team-logo-placeholder {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+  .team-logo {
+    width: 60px;
   }
 
   .header-text h1 {
@@ -806,11 +1091,107 @@ body {
     flex-direction: column;
   }
 
+  .expense-form .field {
+    min-width: auto;
+  }
+
   .votes-table {
     font-size: 0.75rem;
   }
 
   .votes-table th, .votes-table td {
     padding: 8px 6px;
+  }
+}
+
+/* Medium Devices (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .finance-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .expense-form .field {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* Large Devices (> 768px) */
+@media (min-width: 769px) {
+  .finance-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .expense-form .field {
+    flex: 1;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header-content {
+    padding: 10px 20px;
+  }
+
+  .team-logo {
+    width: 40px;
+  }
+
+  .header-text h1 {
+    font-size: 1rem;
+  }
+
+  .header-text p {
+    display: none;
+  }
+
+  .main-nav {
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.7rem;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .player-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .payment-toggle,
+  .btn-logout {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

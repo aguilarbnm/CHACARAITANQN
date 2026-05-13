@@ -73,7 +73,7 @@ function App() {
           </Routes>
         </main>
         <footer className="app-footer">
-          <p>CHACARITANQN © 2025 — Gestión de Equipo</p>
+          <p>chacaritanqn © 2025 — Gestión de Equipo</p>
         </footer>
       </div>
     </Router>
